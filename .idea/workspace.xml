@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c55fb02-84fc-4a23-b606-35f8e1487ec1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+    <list default="true" id="4c55fb02-84fc-4a23-b606-35f8e1487ec1" name="Changes" comment="Выполнил ДЗ по основам олгоритмов">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/skypro/course2/algorithms/CustomArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/skypro/course2/algorithms/CustomListInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/skypro/course2/algorithms/exception/ElementNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/skypro/course2/algorithms/exception/IndexBoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/skypro/course2/algorithms/CustomArrayListTest/CustomArrayListIncorrectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/skypro/course2/algorithms/CustomArrayListTest/CustomArrayListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/skypro/course2/algorithms/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/skypro/course2/algorithms/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +71,8 @@
       <recent name="ru.skypro.course2.algorithms.CustomArrayListTest" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomArrayListBehaviorTest.increaseSizeTest">
-    <configuration name="CustomArrayListBehaviorTest.decreaseSizeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CustomArrayListTest.setReturnValueTest">
+    <configuration name="CustomArrayListTest.addMiddleReturnValueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms" />
       <extension name="coverage">
         <pattern>
@@ -83,14 +81,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest" />
-      <option name="MAIN_CLASS_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest.CustomArrayListBehaviorTest" />
-      <option name="METHOD_NAME" value="decreaseSizeTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest.CustomArrayListTest" />
+      <option name="METHOD_NAME" value="addMiddleReturnValueTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomArrayListBehaviorTest.increaseSizeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomArrayListTest.addTailReturnValueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms" />
       <extension name="coverage">
         <pattern>
@@ -99,14 +97,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest" />
-      <option name="MAIN_CLASS_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest.CustomArrayListBehaviorTest" />
-      <option name="METHOD_NAME" value="increaseSizeTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest.CustomArrayListTest" />
+      <option name="METHOD_NAME" value="addTailReturnValueTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomArrayListBehaviorTest.notEqualsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomArrayListTest.removeByElementReturnValueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms" />
       <extension name="coverage">
         <pattern>
@@ -115,14 +113,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest" />
-      <option name="MAIN_CLASS_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest.CustomArrayListBehaviorTest" />
-      <option name="METHOD_NAME" value="notEqualsTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest.CustomArrayListTest" />
+      <option name="METHOD_NAME" value="removeByElementReturnValueTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomArrayListIncorrectBehaviorTest.equalsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomArrayListTest.removeByIndexReturnValueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms" />
       <extension name="coverage">
         <pattern>
@@ -131,14 +129,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest" />
-      <option name="MAIN_CLASS_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest.CustomArrayListIncorrectBehaviorTest" />
-      <option name="METHOD_NAME" value="equalsTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest.CustomArrayListTest" />
+      <option name="METHOD_NAME" value="removeByIndexReturnValueTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomArrayListIncorrectBehaviorTest.getByIndexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomArrayListTest.setReturnValueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms" />
       <extension name="coverage">
         <pattern>
@@ -147,8 +145,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest" />
-      <option name="MAIN_CLASS_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest.CustomArrayListIncorrectBehaviorTest" />
-      <option name="METHOD_NAME" value="getByIndexTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.skypro.course2.algorithms.CustomArrayListTest.CustomArrayListTest" />
+      <option name="METHOD_NAME" value="setReturnValueTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomArrayListBehaviorTest.increaseSizeTest" />
-        <item itemvalue="JUnit.CustomArrayListBehaviorTest.decreaseSizeTest" />
-        <item itemvalue="JUnit.CustomArrayListIncorrectBehaviorTest.equalsTest" />
-        <item itemvalue="JUnit.CustomArrayListBehaviorTest.notEqualsTest" />
-        <item itemvalue="JUnit.CustomArrayListIncorrectBehaviorTest.getByIndexTest" />
+        <item itemvalue="JUnit.CustomArrayListTest.setReturnValueTest" />
+        <item itemvalue="JUnit.CustomArrayListTest.removeByElementReturnValueTest" />
+        <item itemvalue="JUnit.CustomArrayListTest.removeByIndexReturnValueTest" />
+        <item itemvalue="JUnit.CustomArrayListTest.addMiddleReturnValueTest" />
+        <item itemvalue="JUnit.CustomArrayListTest.addTailReturnValueTest" />
       </list>
     </recent_temporary>
   </component>
@@ -172,8 +170,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663269990902</updated>
-      <workItem from="1663269992003" duration="4407000" />
+      <workItem from="1663269992003" duration="5662000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1663274666750</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663274666750</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,16 +196,12 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="Выполнил ДЗ по основам олгоритмов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выполнил ДЗ по основам олгоритмов" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/skypro/course2/algorithms/CustomArrayListTest/CustomArrayListBehaviorTest.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.lang.Integer" memberName="value" />
