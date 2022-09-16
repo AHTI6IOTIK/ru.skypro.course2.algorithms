@@ -61,6 +61,7 @@ class CustomArrayListTest {
 
     @Test
     void removeByIndexTest() {
+        out.remove(0);
         assertArrayEquals(new String[]{"2", "3"}, out.toArray());
     }
 
