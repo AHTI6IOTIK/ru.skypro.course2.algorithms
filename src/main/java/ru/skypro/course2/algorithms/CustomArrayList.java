@@ -175,9 +175,7 @@ public class CustomArrayList<ElementsType> implements CustomListInterface<Elemen
     private void grow() {
         if (size >= buffer.length) {
             Object[] newBuffer = new Object[buffer.length * 2];
-            for (int i = 0; i < size; i++) {
-                newBuffer[i] = buffer.length;
-            }
+            System.arraycopy(buffer, 0, newBuffer, 0, size);
             buffer = newBuffer;
         }
     }

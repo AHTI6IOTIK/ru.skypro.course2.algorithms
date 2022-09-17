@@ -178,6 +178,28 @@ class CustomArrayListTest {
     }
 
     @Test
+    void sortTest() {
+        out.add("1010");
+        out.add("101");
+        out.add("150");
+        out.add("120");
+        out.add("30");
+        out.add("50");
+        out.add("500");
+        out.add("110");
+        out.add("10");
+        out.add("180");
+        out.contains("10");
+
+        String[] expected = new String[]{"1", "2", "3", "10", "30", "50", "101", "110", "120", "150", "180", "500", "1010"};
+
+        assertArrayEquals(
+            expected,
+            out.toArray()
+        );
+    }
+
+    @Test
     void toArrayTest() {
         assertArrayEquals(new String[]{"1", "2", "3"}, out.toArray());
     }
