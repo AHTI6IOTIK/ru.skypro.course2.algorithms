@@ -1,17 +1,31 @@
 package ru.skypro.course2.algorithms;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
 public class Main {
     public static void main(String[] args) {
-        CustomArrayList<String> stringCustomArrayList = new CustomArrayList<>();
-        stringCustomArrayList.add("f");
-        stringCustomArrayList.add("e");
-        stringCustomArrayList.add("d");
-        stringCustomArrayList.add("c");
-        stringCustomArrayList.add("b");
-        stringCustomArrayList.add("a");
+//        CustomArrayList<String> stringCustomArrayList = new CustomArrayList<>();
+//        stringCustomArrayList.add("f");
+//        stringCustomArrayList.add("e");
+//        stringCustomArrayList.add("d");
+//        stringCustomArrayList.add("c");
+//        stringCustomArrayList.add("b");
+//        stringCustomArrayList.add("a");
+//
+//        stringCustomArrayList.add(0, "40");
+//        System.out.println(stringCustomArrayList.contains("h"));
 
-        stringCustomArrayList.add(0, "40");
-        System.out.println(stringCustomArrayList.contains("h"));
+        /**
+         * Test fastSort
+         * performance: 0.03861111 min
+         */
+//        testPerformance(() -> {
+//            System.out.println("Test fastSort");
+//            int[] ints = generateRandomArray();
+//            fastSort(ints, ints.length);
+//        });
 
         /**
          * Test sortInsertion
@@ -48,6 +62,31 @@ public class Main {
         long start = System.currentTimeMillis();
         testInterface.call();
         System.out.println("performance: " + ((System.currentTimeMillis() - start) / 60f / 60f) + " min");
+    }
+
+    private static int[] fastSort(int[] arr, int size) {
+        if (size < 2) {
+            return arr;
+        }
+
+        int pivot = arr[0];
+        List<Integer> left = new ArrayList<>();
+        List<Integer> right = new ArrayList<>();
+
+        for (int i = 1; i < size; i++) {
+            int o = arr[i];
+            if (o <= pivot) {
+                left.add(o);
+            } else {
+                right.add(o);
+            }
+        }
+
+        return Stream.of(
+            fastSort(left.stream().mapToInt(Integer::intValue).toArray(), left.size()),
+            new int[]{pivot},
+            fastSort(right.stream().mapToInt(Integer::intValue).toArray(), right.size())
+        ).filter(el -> el.length > 0).mapToInt(i -> i[0]).toArray();
     }
 
     private static void sortInsertion(int[] arr) {
