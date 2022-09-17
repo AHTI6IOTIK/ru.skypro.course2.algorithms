@@ -3,7 +3,10 @@ package ru.skypro.course2.algorithms;
 import ru.skypro.course2.algorithms.exception.ElementNotFoundException;
 import ru.skypro.course2.algorithms.exception.IndexBoundException;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class CustomArrayList<ElementsType> implements CustomListInterface<ElementsType> {
     private static final int BASE_SIZE_BUFFER = 10;
@@ -69,8 +72,7 @@ public class CustomArrayList<ElementsType> implements CustomListInterface<Elemen
 
     @Override
     public boolean contains(ElementsType item) {
-        sort();
-
+        buffer = sort(buffer, size);
         return search(item);
     }
 
@@ -180,16 +182,29 @@ public class CustomArrayList<ElementsType> implements CustomListInterface<Elemen
         }
     }
 
-    private void sort() {
-        for (int i = 1; i < size; i++) {
-            Object temp = buffer[i];
-            int j = i;
-            while (j > 0 && buffer[j - 1].hashCode() >= temp.hashCode()) {
-                buffer[j] = buffer[j - 1];
-                j--;
-            }
-            buffer[j] = temp;
+    private Object[] sort(Object[] arr, int size) {
+        if (size < 2) {
+            return arr;
         }
+
+        Object pivot = arr[0];
+        List<Object> left = new ArrayList<>();
+        List<Object> right = new ArrayList<>();
+
+        for (int i = 1; i < size; i++) {
+            Object o = arr[i];
+            if (o.hashCode() <= pivot.hashCode()) {
+                left.add(o);
+            } else {
+                right.add(o);
+            }
+        }
+
+        return Stream.of(
+            sort(left.toArray(), left.size()),
+            new Object[]{pivot},
+            sort(right.toArray(), right.size())
+        ).flatMap(Stream::of).toArray();
     }
 
     private boolean search(ElementsType item) {
