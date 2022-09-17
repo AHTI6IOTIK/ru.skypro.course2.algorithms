@@ -69,12 +69,9 @@ public class CustomArrayList<ElementsType> implements CustomListInterface<Elemen
 
     @Override
     public boolean contains(ElementsType item) {
-        for (int i = 0; i < size; i++) {
-            if (buffer[i].equals(item)) {
-                return true;
-            }
-        }
-        return false;
+        sort();
+
+        return search(item);
     }
 
     @Override
@@ -183,5 +180,38 @@ public class CustomArrayList<ElementsType> implements CustomListInterface<Elemen
             }
             buffer = newBuffer;
         }
+    }
+
+    private void sort() {
+        for (int i = 1; i < size; i++) {
+            Object temp = buffer[i];
+            int j = i;
+            while (j > 0 && buffer[j - 1].hashCode() >= temp.hashCode()) {
+                buffer[j] = buffer[j - 1];
+                j--;
+            }
+            buffer[j] = temp;
+        }
+    }
+
+    private boolean search(ElementsType item) {
+        int min = 0;
+        int max = size - 1;
+
+        while (min <= max) {
+            int mid = (min + max) / 2;
+
+            if (item.hashCode() == buffer[mid].hashCode()) {
+                return true;
+            }
+
+            if (item.hashCode() < buffer[mid].hashCode()) {
+                max = mid - 1;
+            } else {
+                min = mid + 1;
+            }
+        }
+
+        return false;
     }
 }
